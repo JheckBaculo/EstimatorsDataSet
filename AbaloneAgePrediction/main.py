@@ -2,7 +2,6 @@ import load_datacode
 from tensorflow.contrib.learn.python.learn.estimators import model_fn as model_fn_lib
 import tensorflow as tf
 
-FLAGS = None
 #learning rate for the model
 LEARNING_RATE=0.1
 
