@@ -8,7 +8,7 @@ LEARNING_RATE=0.1
 def model_fn(features, targets, mode, params):
     l1 = tf.contrib.layers.relu(features, 10)
     l2 = tf.contrib.layers.relu(l1, 10)
-    output_layer = tf.contrib.layers.fully_connected(inputs=l2, num_outputs=1, activation_fn=None)
+    output_layer = tf.contrib.layers.linear(l2, 1)
     predictions = tf.reshape(output_layer, [-1])
     predictions_dict = {"ages": predictions}
     loss = tf.losses.mean_squared_error(targets, predictions)
